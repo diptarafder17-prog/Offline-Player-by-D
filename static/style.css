@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0e14;
+    color: #e1e6ed;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header h1 {
+    color: #00f2fe;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: #8a99ad;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #151c28;
+    color: #fff;
+    outline: none;
+}
+
+.input-section button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #00f2fe;
+    color: #0b0e14;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.input-section button:hover {
+    background: #4facfe;
+}
+
+.player-wrapper {
+    background: #151c28;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.now-playing {
+    padding: 15px;
+    text-align: center;
+}
+
+.now-playing h3 {
+    font-size: 1rem;
+    color: #00f2fe;
+}
+
+.playlist-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.playlist-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    background: #151c28;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.playlist-item:hover, .playlist-item.active {
+    border-color: #00f2fe;
+}
+
+.playlist-item img {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.track-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.track-info .title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-info .author {
+    font-size: 0.75rem;
+    color: #8a99ad;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #ff4d4d;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+}
