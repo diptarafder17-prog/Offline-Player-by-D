@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dip's-YT Player</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>Dip's-YT Player</h1>
+            <p>Paste a YouTube URL or Video ID to build your playlist</p>
+        </header>
+
+        <section class="input-section">
+            <input type="text" id="videoInput" placeholder="Paste YouTube link or Video ID (e.g., dQw4w9WgXcQ)">
+            <button id="addBtn">Add Track</button>
+        </section>
+
+        <main class="player-wrapper">
+            <div class="video-container">
+                <div id="player"></div>
+            </div>
+            <div class="now-playing" id="nowPlaying">
+                <h3>Select a track to start playing</h3>
+            </div>
+        </main>
+
+        <section class="playlist-section">
+            <h2>Your Playlist</h2>
+            <ul id="playlist" class="playlist-list"></ul>
+        </section>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
